@@ -1,0 +1,4 @@
+#!/bin/bash
+SIZE=$(du -h $1 | awk '{print $1}')
+echo "Copy: $1  "
+pv $1 -s $SIZE > $2
